@@ -1,0 +1,18 @@
+name: Read my Hello File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  show-file-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get my code
+        uses: actions/checkout@v4
+
+      - name: Read the txt file
+        run: |
+          ls -l
+          cat Hello.txt
